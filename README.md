@@ -5,7 +5,7 @@ Workshop created by git360Flip for the Hub of Epitech
 - Download Android Studio: https://developer.android.com/studio#downloads
 
 - Navigate to ./setup/ folder into a terminal:
-	- chmod a+x genymotion-3.2.0-linux_x64.bin
+	- chmod +x genymotion-3.2.0-linux_x64.bin
 	- ./genymotion-3.2.0-linux_x64.bin
 
 This will install Genymotion into the setup directory, you can move it wherever you want
