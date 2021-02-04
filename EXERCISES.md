@@ -82,9 +82,46 @@ All the 'Loaded app:' correspond to the loading of each package of your system.
 Each package initialisation is modified to log his name in addition of his initial initialisation.
 
 # Exercise 2
+Let's change the color of the current time on your emulator.
 
 1) Find the package which contains Clock.java with an updateClock() method
+(see Android Source Code - API 26)
 
-2) Inside your XposedClass, when you handle the loading of each package
+2) Inside your XposedClass, when you handle the loading of each package, find and hook the updateClock() method of the package which contains Clock.java
+(see Xposed documentation)
 
+3) Override the Xposed's method called after the invocation of the updateClock() method from Clock.java
+(see Xposed documentation)
 
+4) Add theses lines in your hooked method of Xposed for updateClock():
+    ```javascript
+    TextView tv = (TextView) param.thisObject;
+    tv.setTextColor(Color.RED);
+    ```
+5) Run the code on your emulator and reboot it
+
+You will see every one minute, the text of the current time of your emulator displayed in red.
+
+# Exercise 3
+Let's modify the text of the current time on your emulator.
+
+1) In your hooked method of Xposed for updateClock(), find a way to get the text of the current time
+
+2) Create a string inside your hooked method of Xposed, which will be added to the text displayed for the current time of your emulator (choose a very short text)
+
+3) Find a way to display the current time advanced by an hour and a half
+
+Remember to reboot your emulator when you debug your Xposed module for reloading the Xposed configuration.
+With Xposed you can also get and modify the parameters given to a hooked method.
+
+# Exercise 4
+Créer une application avec boutons pour changer la couleur de l'heure actuelle (Remote prefs)
+
+# Exercise 5
+Avec une app donnée qui affiche uniquement une string depuis une fonction, modifier le texte affiché avec un textInput dans l'app xposed
+
+# Exercise 6
+Modifier le texte du numéro de téléphone qui appelle le téléphone en ajoutant un TextEdit
+
+# Bonus
+If you are comfortable with Java and not with Kotlin, try to redo the exercises with Kotlin (also valid for the opposite case) ;)
