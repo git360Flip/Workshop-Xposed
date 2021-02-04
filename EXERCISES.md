@@ -173,7 +173,7 @@ all Android packages.
 
 7) Repeat steps 5 and 6 creating another button
 
-# Quick Tutorial - How to manage saved data FROM your application
+## Manage saved data inside your application
 
 To get your data (preferences):
 ```javascript
@@ -202,7 +202,7 @@ You can now change the data inside the application, but the others packages in y
 emulator can't access to it, it's why we have setup a ContentProvider and you have to
 edit your XposedClass.
 
-# Very Quick Tutorial - How to retrieve saved data outside of your application
+## Retrieve saved data outside of your application
 
 To get your data (preferences):
 ```javascript
