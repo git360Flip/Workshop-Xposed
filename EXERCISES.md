@@ -2,6 +2,7 @@
 Workshop created by git360Flip for the Hub of Epitech
 
 Documentation Xposed Framework: https://api.xposed.info/reference/packages.html
+
 Android Code Search: https://cs.android.com/
 
 # Exercise 1
@@ -14,11 +15,14 @@ Let's start by creating a simple hook without an interface.
 
 2) Edit your build.gradle file located in your app folder and add theses lines in your dependencies:
 
+    ```javascript
     compileOnly 'de.robv.android.xposed:api:82'
     compileOnly 'de.robv.android.xposed:api:82:sources'
+    ```
 
 3) Edit your AndroidManifest.xml and add in your application:
 
+    ```javascript
     <meta-data
         android:name="xposedmodule"
         android:value="true" />
@@ -28,6 +32,7 @@ Let's start by creating a simple hook without an interface.
     <meta-data
         android:name="xposedminversion"
         android:value="53" />
+    ```
 
 4) Create a class and remember its name and the name of your package. This class will contains the code to modify the methods of the Android API, let's name it for the tutorial: XposedClass
 
@@ -40,10 +45,11 @@ Let's start by creating a simple hook without an interface.
 6) Modify your XposedClass
 
     - Add theses imports:
-
+    ```javascript
     import de.robv.android.xposed.IXposedHookLoadPackage;
     import de.robv.android.xposed.callbacks.XC_LoadPackage;
     import de.robv.android.xposed.XposedBridge;
+    ```
 
     - Implement IXposedHookLoadPackage for your XposedClass
     (search for keyword "implements" if you are new to Java)
@@ -52,8 +58,9 @@ Let's start by creating a simple hook without an interface.
     as parameter
 
     - Add this line inside your overriden method:
-
+    ```javascript
     XposedBridge.log("Loaded app: " + lpparam.packageName);
+    ```
 
 7) Run the code
 
