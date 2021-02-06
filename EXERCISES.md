@@ -216,10 +216,35 @@ Getting and saving a variable in your preference file is done the same way as in
 value saved in your preferences file
 
 # Exercise 5
-Avec une app donnée qui affiche uniquement une string depuis une fonction, modifier le texte affiché avec un textInput dans l'app xposed
+Let's edit a text displayed by another app with a text that can be edited inside
+your application.
+
+1) Install the displayString.apk on your emulator (drag and drop it)
+
+2) In your app, add a TextEdit with a Button in your Activity
+
+    - When you press the button, the text inside TextEdit should be saved in
+    your preferences (data)
+
+3) Hook the method that changes the text displayed in displayString.apk app
+
+    displayString.apk information:
+        - packageName: "com.WsXposed.DisplayString"
+        - class: "MainActivity"
+        - method: "public void changeString(String txt)"
+    
+    You must use the text from your TextEdit to replace the text displayed in the displayString.apk app.
+
+4) Compile your application and restart your emulator
+
+If you are successful, when you start the displayString.apk application, you will get the text of your application preferences.
 
 # Exercise 6
-Modifier le texte du numéro de téléphone qui appelle le téléphone en ajoutant un TextEdit
+When you received a call on your phone, a method is called in the Android API to display the number of the incoming call.
+
+Find a way to change the number of an incoming call.
+
+The replaced number must be a variable in your application preferences, and can be changed in your application with a TextEdit coupled with a Button.
 
 # Bonus
 If you are comfortable with Java and not with Kotlin, try to redo the exercises with Kotlin (also valid for the opposite case) ;)
