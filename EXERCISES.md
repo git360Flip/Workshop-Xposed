@@ -229,9 +229,9 @@ your application.
 3) Hook the method that changes the text displayed in displayString.apk app
 
     displayString.apk information:
-        - packageName: "com.WsXposed.DisplayString"
-        - class: "MainActivity"
-        - method: "public void changeString(String txt)"
+        packageName: "com.WsXposed.DisplayString",
+        class: "MainActivity",
+        method: "public void changeString(String txt)"
     
     You must use the text from your TextEdit to replace the text displayed in the displayString.apk app.
 
