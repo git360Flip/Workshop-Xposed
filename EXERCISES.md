@@ -216,6 +216,21 @@ Getting and saving a variable in your preference file is done the same way as in
 value saved in your preferences file
 
 # Exercise 5
+Let's make our application prettier.
+
+1) Add a TextView with the following parameters to your layout (.xml file)
+
+    - The displayed text must be: "Clock Text Color"
+    - The text must have a size of 20sp
+    - The text must be displayed in bold
+    - The text color must be set to black
+
+2) Change the color of each button to match the color applied to clock text
+    (Example: if your button changes the clock text to red, you need to set the button color to red)
+
+You can see an image of a correct result named exercise5.png in the results folder.
+
+# Exercise 6
 Let's edit a text displayed by another app with a text that can be edited inside
 your application.
 
@@ -226,7 +241,17 @@ your application.
     - When you press the button, the text inside TextEdit should be saved in
     your preferences (data)
 
-3) Hook the method that changes the text displayed in displayString.apk app
+3) Add a TextView with the following parameters to your layout
+
+    - The displayed text must be: "Package Text"
+    - The text must have a size of 20sp
+    - The text must be displayed in bold
+    - The text color must be set to black
+
+4) Display a short message (called Toast) when your click on each button to 
+say if the action was successfully completed
+
+5) Hook the method that changes the text displayed in displayString.apk app
 
     displayString.apk information:
         packageName: "com.WsXposed.DisplayString",
@@ -235,16 +260,28 @@ your application.
     
     You must use the text from your TextEdit to replace the text displayed in the displayString.apk app.
 
-4) Compile your application and restart your emulator
+6) Compile your application and restart your emulator
 
 If you are successful, when you start the displayString.apk application, you will get the text of your application preferences.
 
-# Exercise 6
+You can see an image of a correct result named exercise6.png in the results folder.
+
+# Exercise 7
 When you received a call on your phone, a method is called in the Android API to display the number of the incoming call.
 
 Find a way to change the number of an incoming call.
 
 The replaced number must be a variable in your application preferences, and can be changed in your application with a TextEdit coupled with a Button.
+
+Because we never forget to display the title of a new feature,
+Add a TextView with the following parameters to your layout
+
+    - The displayed text must be: "Replacement of the Number"
+    - The text must have a size of 20sp
+    - The text must be displayed in bold
+    - The text color must be set to black
+
+You can see an image of a correct result named exercise7.png in the results folder.
 
 # Bonus
 If you are comfortable with Java and not with Kotlin, try to redo the exercises with Kotlin (also valid for the opposite case) ;)
